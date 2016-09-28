@@ -16,7 +16,7 @@ public class Main {
                 " and press enter for a new row. Type 'done' when finished");
         Matrix matrix2 = new Matrix();
 
-        System.out.println(checkIfMatricesCanBeMultiplied(matrix1.matrixAsList, matrix2.matrixAsList));
+        System.out.println(checkIfMatricesCanBeMultiplied(matrix1, matrix2));
 
         inputScanner.close();
     }
@@ -39,6 +39,10 @@ public class Main {
             //multiplyMatrices(matrix1, matrix2);
         }
         return "One or more matrices is empty";
+    }
+
+    private static String checkIfMatricesCanBeMultiplied(Matrix matrix1, Matrix matrix2){
+        return checkIfMatricesCanBeMultiplied(matrix1.matrixAsList, matrix2.matrixAsList);
     }
 }
 
