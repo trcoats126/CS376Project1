@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by trcoats on 9/28/16.
  */
-class Matrix extends ArrayList<ArrayList<Integer>>{
+class Matrix{
     ArrayList<ArrayList<Integer>> matrixAsList;
 
     Matrix(){
