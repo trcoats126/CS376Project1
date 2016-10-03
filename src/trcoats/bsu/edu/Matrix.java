@@ -3,9 +3,6 @@ package trcoats.bsu.edu;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by trcoats on 9/28/16.
- */
 class Matrix{
     ArrayList<ArrayList<Integer>> matrixAsList;
 
@@ -13,6 +10,7 @@ class Matrix{
         ArrayList<ArrayList<Integer>>matrix = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> matrixRows = new ArrayList<Integer>();
         Scanner scanner = new Scanner(System.in);
+        String[] rowInput;
 
         while(true) {
             String input = scanner.nextLine();
@@ -21,7 +19,12 @@ class Matrix{
                 break;
             }
 
-            String[] rowInput = input.split(",");
+            if(input.contains(" ")){
+                rowInput = input.split(", ");
+            }
+            else {
+                rowInput = input.split(",");
+            }
 
             for (String s : rowInput) {
                 int i = Integer.parseInt(s);
